@@ -3,7 +3,6 @@ package org.evy.toolkit.pages;
 
 import org.evy.toolkit.pages.account.AccountSection;
 import org.evy.toolkit.pages.product.ProductSection;
-import org.evy.toolkit.pages.searchbar.SearchbarSection;
 import org.evy.toolkit.utils.LoggerUtils;
 
 
@@ -23,8 +22,5 @@ public class HomePage extends BasePage {
         return new ProductSection();
     }
 
-    public SearchbarSection navigateToSearchbarSection(){
-        LoggerUtils.info(getClass(),"Navigate to SearchbarSection");
-        return new SearchbarSection();
-    }
+
 }
