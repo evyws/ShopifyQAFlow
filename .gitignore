@@ -7,6 +7,10 @@
 !Jenkinsfile
 !.gitignore
 
+# Allow everything under src
+!src/
+!src/**
+
 # Allow everything under src/test
 !src/test/
 !src/test/**
