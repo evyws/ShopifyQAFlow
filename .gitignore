@@ -9,3 +9,4 @@
 
 # Allow everything under src/test
 !src/test/
+!src/test/**
