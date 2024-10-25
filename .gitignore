@@ -1,0 +1,11 @@
+# Ignore everything by default
+*
+
+# Allow specific files
+!pom.xml
+!testng.xml
+!Jenkinsfile
+!.gitignore
+
+# Allow everything under src/test
+!src/test/

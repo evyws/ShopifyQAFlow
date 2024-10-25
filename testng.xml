@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="ShopifyQAFlow Suite" parallel="tests">
+
+    <listeners>
+        <listener class-name="org.evy.toolkit.listeners.ListenerManager"/>
+    </listeners>
+
+    <test name="Account Tests">
+        <classes>
+            <class name="org.evy.test.account.RegistrationTest"/>
+            <class name="org.evy.test.account.LoginTest"/>
+            <class name="org.evy.test.account.LogoutTest"/>
+        </classes>
+    </test>
+
+    <test name="Product Tests">
+        <classes>
+            <class name="org.evy.test.product.ProductCategoriesTest"/>
+            <class name="org.evy.test.product.ProductNameTest"/>
+        </classes>
+    </test>
+    <test name="Cart Tests">
+        <classes>
+            <class name="org.evy.test.cart.AddProductToCartTest"/>
+            <class name="org.evy.test.cart.RemoveProductFromCartTest"/>
+        </classes>
+    </test>
+
+    <test name="EndToEnd">
+        <classes>
+            <class name="org.evy.test.EndToEndTest"/>
+        </classes>
+    </test>
+</suite>
