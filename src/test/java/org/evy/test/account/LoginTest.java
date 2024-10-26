@@ -16,22 +16,23 @@ import org.testng.annotations.Test;
 @Feature("Login Feature")
 public class LoginTest extends BaseTest {
 
-    @Test(dataProviderClass = DataProvider.class,dataProvider = "loginData")
-    @Parameters({"email","password","operation","expectedMsgStatus"})
-    @Story("")
-    @Description("")
-    public void testUserLogin(String email,String password,String operation){
-        boolean actualMsgStatus=performLogin(email, password, operation);
+    @Test(dataProviderClass = DataProvider.class, dataProvider = "loginData")
+    @Parameters({"email", "password", "operation", "expectedMsgStatus"})
+    @Story("User Login Proccess")
+    @Description("Tests the login functionality for valid and invalid users. " +
+            "It checks if the login status is as expected based on the input credentials.")
+    public void testUserLogin(String email, String password, String operation) {
+        boolean actualMsgStatus = performLogin(email, password, operation);
         AssertionUtils.assertTrue(actualMsgStatus,
                 String.format("Validating that the actual login status (%b) matches the expected status (%b).",
                         actualMsgStatus, true));
     }
 
-    private boolean performLogin(String email,String password,String operation){
+    private boolean performLogin(String email, String password, String operation) {
         return new HomePage()
                 .navigateToAccountSection()
                 .navigateToLoginPage()
-                .login(email,password,false, LoginPage.class)
+                .login(email, password, false, LoginPage.class)
                 .getLoginResponseMsgDisplay(operation);
     }
 }
