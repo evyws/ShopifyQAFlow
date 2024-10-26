@@ -18,7 +18,7 @@ public class LoginTest extends BaseTest {
 
     @Test(dataProviderClass = DataProvider.class, dataProvider = "loginData")
     @Parameters({"email", "password", "operation", "expectedMsgStatus"})
-    @Story("User Login Proccess")
+    @Story("User Login Process")
     @Description("Tests the login functionality for valid and invalid users. " +
             "It checks if the login status is as expected based on the input credentials.")
     public void testUserLogin(String email, String password, String operation) {
