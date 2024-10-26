@@ -6,6 +6,7 @@
 !testng.xml
 !Jenkinsfile
 !.gitignore
+!README.md
 
 # Allow everything under src
 !src/
